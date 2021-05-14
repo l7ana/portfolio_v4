@@ -1,0 +1,40 @@
+// Variables
+// $type-heading: 'korolev-rounded', sans-serif;
+$type-heading:'kepler-std-display', serif;
+$type-subhead: 'kepler-std-semicondensed-cap', serif;
+$type-body: 'hero-new', sans-serif;
+
+$navy: #173753; 
+$navy-2: #0C1C2A;
+$navy-3: #4D6B85;
+$rust: #543220;
+$turq: #1D7D77;
+$gold: #A88F1E;
+$gold-2: #54470F;
+
+
+$white-1:#f1f9ff;
+$grey-1:#D1D7DD;
+$grey-2:#A2AFBA;
+$grey-3: #748798;
+$black-1: #0e283d;
+$black-2: #011627;
+
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+$breakpoint-x-small: 480px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+// Import
+@import 'partials/typography.scss';
+@import 'partials/media.scss';
+@import 'partials/structure.scss';
+@import 'partials/cardgrid.scss';
+@import 'partials/grid.scss';
+@import 'partials/buttons.scss'; 
+@import 'partials/swiper.scss';
+@import 'partials/animations.scss';
+@import 'partials/tabs.scss';
+@import 'partials/subpages.scss';

@@ -1,0 +1,192 @@
+/* Typography */  
+
+body {
+  font-family: $type-body;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  font-family: $type-body;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin: .5em 0 0 0;
+}
+
+h2, h3 {
+  font-family: $type-subhead;
+  margin: 0;
+  color: $navy-2;
+  font-variant-ligatures: common-ligatures;
+}
+
+h1 {
+  font-family: $type-heading;
+  font-weight: 400;
+  font-size: 7em;
+  line-height: .9em;
+  margin: .5em 0 0 0;
+  font-variant-ligatures: common-ligatures;
+  hanging-punctuation: first;
+}
+
+section.project-top h1 {
+  font-size: clamp(3em, 7vw, 7em); 
+}
+
+h2 {
+    font-size: 4em;
+    line-height: 1.2em;
+    margin: 0;
+    color: $navy;
+  }
+
+  h3 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: $rust;
+  }
+
+  h4 {
+    font-family: $type-body;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $grey-3;
+    margin: 0;
+  }
+
+  .text-centered {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subhead {
+    font-family: $type-subhead;
+    font-size: 2em;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  section.project-top .subhead {
+    font-size: clamp(1.5em,2vw,2em);
+  }
+
+  .sectionhead {
+    font-family: $type-body;
+    font-weight: 300;
+    font-size: 2em;
+  }
+
+  a { 
+    color: $turq;
+    font-weight: 400;
+   }
+
+   p.caption {
+     font-family: $type-subhead;
+     color: $grey-3;
+     font-weight: 600;
+     line-height: 1.2;
+    //  font-style: italic;
+   }
+
+  /*Responsive Type*/
+  @media (min-width: $breakpoint-x-small) {
+    p {font-size: 1.25em;}
+    ul li, .intro ul li, .bulleted li {font-size: 1.25em;}
+  }
+
+// Unordered Lists
+ul li {
+  font-family: $type-body;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+ul.bulleted li {
+list-style: none;
+// font-weight: 400;
+}
+ul.bulleted li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: $turq; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+// Section Typography
+
+.intro ul{
+  list-style: none;
+  padding: 0;
+  li {
+    color: $rust;
+  }
+}
+
+.intro {
+  .column.one-eigth h3 {
+    margin-top: 1.6em;
+    // text-transform: uppercase;
+    // letter-spacing: 1px;
+    color: $rust;
+    font-size: 1.5em;
+  }
+}
+
+.project-top {
+  h1 {font-size: clamp(4.5em, 7vw, 7em); }
+}
+
+  // Work Section
+  .work {
+    .sectionhead {
+      margin: 1%;
+    }
+  }
+
+.card-row {
+  a {text-decoration: none;}
+  .card {
+    h3 {
+      font-family: $type-subhead;
+      font-size: 2em;
+      font-weight: 600;
+    }
+    a {text-decoration: none;}
+    p {font-weight: 300;}
+  }
+}
+
+p.pull-quote {
+  font-size: 4em;
+  font-family: $type-heading;
+  line-height: 1.2;
+  color: $rust;
+  font-weight: 300;
+  z-index: 1;
+  margin: 4em 0 -1em 0;
+  font-feature-settings: "liga";
+  span {font-style: italic; font-weight: 500; padding-right: .1em;}
+}
+p.pull-quote::before {
+  content: "\201C";
+  font-weight: 700;
+  font-size: 6em;
+  line-height: 0;
+  display: block;
+  // margin-left: -17%;
+  // margin-bottom: -18%;
+  z-index: -1;
+  color: rgba($rust,0.2);
+}
+
+.award p,
+.notice p {
+  font-size: 2em;
+}
+
+.award.gold strong {color:$gold;}
+.award.silver strong {color:$navy;}
+.award.bronze strong {color:$rust;}
