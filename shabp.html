@@ -22,7 +22,6 @@
                 <div class="site-identity">
                     <h1><a href="index.html">Liana Young</a></h1>
                     <a href="index.html">
-                        <!-- <img src="img/wordmark_1.svg" alt="Liana Young"> -->
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 255.19 44.41">
                             <g id="Layer_2" data-name="Layer 2">
@@ -68,7 +67,6 @@
                 <ul>
                     <li><a href="work.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -166,6 +164,7 @@
             </div>
         </div>
     </section>
+
     <section class="case-study">
         <div class="container">
             <div class="row" data-inview="no">
@@ -234,6 +233,7 @@
             </div>
         </div>
     </section>
+
     <section class="case-study" id="shabp-printed">
         <div class="container">
             <div class="row">
@@ -270,6 +270,7 @@
             </div>
         </div>
     </section>
+
     <section class="case-study" id="shabp-digital">
         <div class="container">
             <div class="row">
@@ -332,83 +333,7 @@
             </div>
         </div>
     </section>
-    <section id="other">
-        <div class="container">
-            <div class="row no-margin">
-                <div class="column one-half centered text-centered">
-                    <h2 class="sectionhead">Room for More?</h2>
-                    <p>Here are more projects for you to check out.</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-container swiper-two" id="swiper-two">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="natura-brochure.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/natura_2x1.jpg" alt="natura insects brochure">
-                        </div>
-                        <div class="swiper-info">
-                            <a href="natura-brochure.html" class="arrow-link">
-                                <h3>Natura Insects Exhibit Brochure</h3>
-                            </a>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="twoladies.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/2ladiesbox_2x1.jpg" alt="Two Ladies Kitchen Box">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Two Ladies Kitchen Logo</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="fohr.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/fohr_mockup_2x1.jpg" alt="friends of hawaii robotics">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Friends of Hawai&#8216;i Robotics UI</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="copenhagen-logo.html">
-                        <div class="swiper-image">
-                            <img src="./img/copenhagen-logo/copen-2x1.svg" alt="Copenhagen City Tourism Logo">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Copenhagen City Tourism Logo</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="honolulu-flag.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/honolulu_flag_2x1.jpg" alt="Honolulu City Flag">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Kinetic Typography</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="honolulu-flag.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/kinetic_1x1.jpg" alt="KInetic Typography Thumbnail">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Kinetic Typography</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
+
     <footer>
         <div class="container">
             <nav class="footer-nav">
@@ -417,37 +342,22 @@
                         <svg width="26" height="13">
                             <path d="M0,13 L13,0 L26,13" />
                         </svg></a>
-                    <a href="#top" class="scroll scroll-text">Back to Top</a>
+                    <a href="#top" class="scroll scroll-text hide-mobile">Back to Top</a>
                 </div>
                 <ul>
-                    <li><a href="work.html">Work</a></li>
+                    <li><a href="work.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
     <script src="js/script.js"></script>
     <!-- Scroll JS -->
     <script src="js/scroll.js"></script>
     <!-- Lottie Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper2 = new Swiper('#swiper-two', {
-            slidesPerView: 3,
-            spaceBetween: 0,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'progressbar',
-            },
-        });
-
-    </script>
 
     <script>
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER

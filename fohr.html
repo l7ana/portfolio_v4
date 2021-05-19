@@ -68,7 +68,6 @@
                 <ul>
                     <li><a href="work.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -80,13 +79,21 @@
             <h1 data-inview="no">Friends of Hawai&#8216;i <br> Robotics Website <br> Redesign</h1>
             <p class="subhead" data-inview="no">Paying homage to a non-profit that shaped my highschool education.
             </p>
+            <div class="arrow-down">
+                <a href="#intro" class="scroll">
+                    Read More
+                    <svg width="26" height="13">
+                        <path d="M0,0 L13,13 L26,0" />
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="project-top-wrapper">
             <img src="img/fohr/fohr-imac-mockup.png" alt="" id="fohr-project-top">
         </div>
     </section>
 
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="container">
             <div class="row">
                 <div class="column three-fourths" data-inview="no">
@@ -209,72 +216,47 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-container swiper-two" id="swiper-two">
+        <div class="swiper-container swiper-thumbs">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="natura-brochure.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/natura_2x1.jpg" alt="natura insects brochure">
-                        </div>
-                        <div class="swiper-info">
-                            <a href="natura-brochure.html" class="arrow-link">
-                                <h3>Natura Insects Exhibit Brochure</h3>
-                            </a>
-                        </div>
+                        <img src="./img/1x1/natura_1x1.jpg" alt="natura insects brochure">
+                </div>
+                <div class="swiper-slide">
+                    <a href="shabp.html">
+                        <img src="./img/1x1/shabpenamel_1x1.jpg" alt="Small Hands Against Big Phones">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="twoladies.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/2ladiesbox_2x1.jpg" alt="Two Ladies Kitchen Box">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Two Ladies Kitchen Logo</h3>
-                        </div>
+                        <img src="./img/1x1/2ladies_1x1.jpg" alt="Two Ladies Kitchen Box">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="fohr.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/fohr_mockup_2x1.jpg" alt="friends of hawaii robotics">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Friends of Hawai&#8216;i Robotics UI</h3>
-                        </div>
+                        <img src="./img/1x1/fohr_1x1.jpg" alt="friends of hawaii robotics">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="copenhagen-logo.html">
-                        <div class="swiper-image">
-                            <img src="./img/copenhagen-logo/copen-2x1.svg" alt="Copenhagen City Tourism Logo">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Copenhagen City Tourism Logo</h3>
-                        </div>
+                        <img src="./img/1x1/copen_1x1.jpg" alt="Copenhagen City Tourism Logo">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="honolulu-flag.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/honolulu_flag_2x1.jpg" alt="Honolulu City Flag">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Kinetic Typography</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="honolulu-flag.html">
-                        <div class="swiper-image">
-                            <img src="./img/2x1/kinetic_1x1.jpg" alt="KInetic Typography Thumbnail">
-                        </div>
-                        <div class="swiper-info">
-                            <h3>Kinetic Typography</h3>
-                        </div>
+                    <a href="kpc.html">
+                        <img src="./img/1x1/kpc-mockup_1x1-2.jpg" alt="Kahili Pet Center">
+
+                        <small class="award-label">
+                            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
+                            </lottie-player>
+                        </small>
                     </a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
     </section>
 
@@ -286,12 +268,11 @@
                         <svg width="26" height="13">
                             <path d="M0,13 L13,0 L26,13" />
                         </svg></a>
-                    <a href="#top" class="scroll scroll-text">Back to Top</a>
+                    <a href="#top" class="scroll scroll-text hide-mobile">Back to Top</a>
                 </div>
                 <ul>
-                    <li><a href="work.html">Work</a></li>
+                    <li><a href="work.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -308,7 +289,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        const swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
@@ -332,12 +313,19 @@
             },
         });
 
-        var swiper2 = new Swiper('#swiper-two', {
+        var swiper2 = new Swiper('.swiper-thumbs', {
             slidesPerView: 3,
-            spaceBetween: 0,
+            spaceBetween: 10,
             pagination: {
                 el: '.swiper-pagination',
-                type: 'progressbar',
+                clickable: true,
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
 

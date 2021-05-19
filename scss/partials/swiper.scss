@@ -176,61 +176,28 @@
 
 
 // Side Scroll Swiper Cards
-  #swiper-two.swiper-two {
-    @media (max-width: 768px) {
-      width: 100%; height: 100px;
-      .swiper-slide {height: 100px;}
-      .swiper-info {height: 15%;}
-    }
-    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {background: $turq;}
-    width: 100%; height: 250px;
+  .swiper-thumbs.swiper-container {
     margin: 2em 0 0 0;
-    a {text-decoration: none;}
-    .swiper-slide {
-      width: 100%; height: 250px;
-      background: $grey-1;
-      display: relative;
-      overflow: hidden;
-      .swiper-image {
-        transform: scale(1);
-        transition: all .5s ease-in-out;
-      }
-      .swiper-info {
-        background-color: rgba($navy-2, .8);
-        height: 15%; width: 100%;
-        padding: 1em;
-        display: absolute;
-        bottom: 0; right: 0; 
-        z-index: 3;
-        transform:translateY(0%);
-        transition: all .5s ease-in-out;
-        h3 {
-          font-family: $type-subhead;
-          font-size: 2em;
-          font-weight: 600;
-          color: white;
-          &::after {
-            content: '\27F6';
-            padding-left: -2em;
-            opacity: .2;
-            color: white;
-            transition: all .7s .2s ease-in-out;
-          }
-        }
-      }
-      &:hover {
-        .swiper-image { transform: scale(1.01); }
-        .swiper-info {
-          transform:translateY(-100%);
-          h3::after {
-            opacity: 1;
-            padding-left: .2em;
-            color: $turq;
-          }
-        }
-      }
+    .swiper-button-prev {
+      color: white;
+      top: 50%;
+      left: 5%;
+      right: 0;
+      font-size: 1em;
+    }
+    .swiper-button-next {
+    color: white;
+    top: 50%;
+    left: auto;
+    right: 5%;
+    font-size: 1em;
+    }
+    @media (min-width: $breakpoint-x-small) {
+      .swiper-button-prev { font-size: 2em; }
+      .swiper-button-next {font-size: 2em;}
     }
   }
+
 
     /* Swiper Buttons */
     .swiper-button-prev {
@@ -240,7 +207,7 @@
       right: 17%;
     }
   
-  .swiper-button-next {
+    .swiper-button-next {
     color: rgba(255,255,255,1);
     top: 56%;
     left: auto;
@@ -250,8 +217,6 @@
   .swiper-button-next:after, .swiper-button-prev:after {
     font-size: 1.5em;
   }
-  
-  
 
   /* Case study swiper*/
   .swiper-pagination-bullet-active {background-color: $turq;}

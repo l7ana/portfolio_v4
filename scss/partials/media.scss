@@ -4,14 +4,6 @@ img {
     height: auto;
 }
 
-.site-identity {
-    h1 {
-        font-size: 2.5em;
-        visibility: hidden;
-        margin-top: -.25em;
-    }
-}
-
 .video-bg {
     background-image: none;
 }
@@ -35,10 +27,6 @@ lottie-player.video-bg#shabp-hero {
     position: absolute;
     top:10%; left:45%;
     z-index: 10;
-}
-
-.site-identity a svg {
-    fill: $turq; color: $turq;
 }
 
 #kpc-ani {
@@ -152,6 +140,18 @@ lottie-player.video-bg#shabp-hero {
     @media (min-width: 768px) {
         right: -10%;
         top: 15%;
+    }
+}
+
+#prime-project-top {
+    right: 2%;
+    top: auto;
+    bottom: -30%;
+    width: 80%;
+    @media (min-width: 768px) {
+        right: -20%;
+        top: 5%;
+        width: 100%;
     }
 }
 

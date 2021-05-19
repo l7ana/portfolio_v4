@@ -1,15 +1,27 @@
 /*TABS*/
 
 .tab-section {
-    padding: 5em 0;
+    padding: 2em 0 5em 0;
     height: auto;
     [data-tabstate="active"] {
-      color: white;
+      // color: white;
       transition: all .2s ease;
-      &[data-id="featured-tab"] {background-color: $navy;}
-      &[data-id="print-tab"] {background-color: $gold;}
-      &[data-id="digital-tab"] {background-color: $turq;}
-      &[data-id="identity-tab"] {background-color: $rust;}
+      &[data-id="featured-tab"] {
+        color: $navy;
+        border-bottom: 4px solid $navy;
+      }
+      &[data-id="print-tab"] {
+        color: $gold;
+        border-bottom: 4px solid $gold;
+      }
+      &[data-id="digital-tab"] {
+        color: $turq;
+        border-bottom: 4px solid $turq;
+      }
+      &[data-id="identity-tab"] {
+        color: $rust;
+        border-bottom: 4px solid $rust;
+      }
     }
     [data-contentstate="inactive"] {
       display: none;
@@ -17,24 +29,96 @@
     [data-contentstate="active"] {
       display: block;
     }
+    nav.work-tabs {position: relative; z-index: 1;}
+    nav.work-tabs::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      transform: translateY(-16px);
+      border-bottom: 2px solid $grey-1;
+      height: 1px;
+      display: block;
+    }
     .tab-buttons {
       display: flex;
       list-style: none;
-      margin: 1em 0;
-      padding: 0;
-      li {
-        margin-right: 1.5em;
-      }
+      margin: 0; padding: 0;
+      // li {
+      //   border-bottom: 4px solid $grey-1;
+      // }
       button {
         background-color: transparent;
+        color: $grey-1;
         border: none;
+        border-bottom: 4px solid transparent;
+        padding-bottom: 10px;
         font: inherit;
         font-weight: 600;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: .5px;
+        font-size: 1em;
+        // text-transform: uppercase;
+        // letter-spacing: .5px;
         cursor: pointer;
-        padding: .5em 1em;
+        margin: 0 .5em 1em 0;
       }
     }
+
+    @media (min-width: $breakpoint-small) {
+      .tab-buttons button {
+        font-size: 1.5em;
+        margin: 0 1em 1em 0;
+        padding-bottom: 20px;
+      }
+      nav.work-tabs::after { transform: translateY(-23.5px); }
+    }
   }
+  
+
+  /* ACCORDIAN */
+
+.accordian {
+  margin: 0 0 3em 0;
+  .tab {
+    background-color: white;
+    position: relative;
+    border-bottom: 2px solid $grey-1;
+  }
+  .arrow svg { 
+      position: absolute;
+      display: block;
+      transform: rotate(0);
+      top: 25%;
+      left: auto; right: 1%;
+      transition: all .5s ease-in-out ;
+      cursor: pointer;
+      path {
+        fill: transparent;
+        stroke: $turq;
+      }
+    }
+  &.open .arrow svg {
+      // margin-bottom: 2px;
+      transform: rotate(180deg);
+    }
+}
+
+.collapsible {
+  transition: 1s ease-in-out  all;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 ;
+  border-bottom: 0px solid $grey-1;
+  ul.entry {
+    // border-bottom: 2px dotted $grey-1;
+    margin-bottom: 2em;
+  }
+}
+
+.open .collapsible {
+  display: block;
+  opacity: 1;
+  max-height: 60vh;
+  overflow-y: scroll;
+  padding: 1em 0em 0em 0em;
+  border-bottom: 2px solid $grey-1;
+}

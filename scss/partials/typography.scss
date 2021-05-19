@@ -30,9 +30,6 @@ h1 {
   hanging-punctuation: first;
 }
 
-section.project-top h1 {
-  font-size: clamp(3em, 7vw, 7em); 
-}
 
 h2 {
     font-size: 4em;
@@ -55,6 +52,13 @@ h2 {
     color: $grey-3;
     margin: 0;
   }
+  h4.smallcaps {
+    color: $navy-3;
+    font-family: $type-subhead;
+    letter-spacing: .5px;
+    font-feature-settings: "smcp";
+    margin-top: 1em;
+  }
 
   .text-centered {
     margin: 0 auto;
@@ -67,14 +71,12 @@ h2 {
     font-style: italic;
     line-height: 1.5;
   }
-  section.project-top .subhead {
-    font-size: clamp(1.5em,2vw,2em);
-  }
 
   .sectionhead {
     font-family: $type-body;
     font-weight: 300;
     font-size: 2em;
+    margin: 0;
   }
 
   a { 
@@ -135,8 +137,10 @@ ul.bulleted li::before {
   }
 }
 
-.project-top {
-  h1 {font-size: clamp(4.5em, 7vw, 7em); }
+.project-top,
+.page-top {
+  h1 {font-size: clamp(3.5em, 7vw, 7em); }
+  .subhead {font-size: clamp(1.5em,2vw,2em);}
 }
 
   // Work Section
@@ -190,3 +194,52 @@ p.pull-quote::before {
 .award.gold strong {color:$gold;}
 .award.silver strong {color:$navy;}
 .award.bronze strong {color:$rust;}
+
+/*Resume*/
+.resume.sectionhead {
+  display: inline;
+  font-weight: 700;
+  font-family: $type-body;
+  color: $navy-3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  &.education {color: $navy-3;}
+  &.experience {color: $turq;}
+  &.achievements {color: $gold;}
+  &.skills {color: $rust;}
+}
+
+.collapsible {
+  ul.entry {
+    margin: 0; padding: 0; 
+    list-style: none;
+    > li {padding-bottom: 2em;}
+  }
+  p.date {
+    font-family: $type-subhead;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $gold;
+  }
+  p.date::after {
+    content:"";
+    width: 100%;
+    margin: 0 0 1em 0;
+    border-top: 1.5px dotted $gold;
+    height: 1px;
+    display: inline-block;
+  }
+  p.date.line::before,
+  p.date.line::after {
+    content:"";
+    width: 45%;
+    margin: 0 5px 3px 5px;
+    border-top: 1.5px dotted $gold;
+    height: 1px;
+    display: inline-block;
+  }
+  h3 strong {font-style: italic;}
+  h2 {font-size: 3em; margin-bottom: 0;}
+  h3 {font-size: 2.2em;}
+}

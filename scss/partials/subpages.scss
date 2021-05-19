@@ -160,13 +160,6 @@
   }
   
 /*Prime*/
-  .project-top.prime {
-    background-image: url(../img/prime/primelogo.svg);
-    background-size: 20%;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    overflow-x: hidden;
-  }
   #prime-video {margin-bottom: 8em;}
   
   #to-prime-swiper {
@@ -281,6 +274,11 @@
   }
   
 /*Gems*/
+#stamps-intro {
+  margin: 0 0 5em 0;
+  padding: 5em 0 1em 0;
+}
+
   #gems-bottom {
     margin-bottom: 0;
     padding-bottom: 0;

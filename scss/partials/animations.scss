@@ -173,3 +173,71 @@
     transition-delay: 1.2s;
     }
 }
+
+/*Resume Rotating Text*/
+
+@keyframes move {
+  0%  { top:  -0.5em; }
+  4%  { top:  -0.5em; }
+  16% { top: -3.2em; }
+  20% { top: -3.2em; }
+  32% { top: -5.9em; }
+  36% { top: -5.9em; }
+  48% { top: -8.7em; }
+  51% { top: -8.7em; }
+  64% { top: -10.5em; }
+  68% { top: -10.5em; }
+  80% { top: -12.2em; }
+  84% { top: -12.2em; }
+  }
+
+@media (min-width: $breakpoint-x-small) {
+  @keyframes move {
+    0%  { top:  0vh; }
+    4%  { top:  0vh; }
+    16% { top: -90%; }
+    20% { top: -90%; }
+    32% { top: -180%; }
+    36% { top: -180%; }
+    48% { top: -280%; }
+    51% { top: -280%; }
+    64% { top: -370%; }
+    68% { top: -370%; }
+    80% { top: -450%; }
+    84% { top: -450%; }
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+@keyframes move {
+  0%  { top:  -0.5em; }
+  4%  { top:  -0.5em; }
+  16% { top: -2em; }
+  20% { top: -2em; }
+  32% { top: -3.5em; }
+  36% { top: -3.5em; }
+  48% { top: -5em; }
+  51% { top: -5em; }
+  64% { top: -6.5em; }
+  68% { top: -6.5em; }
+  80% { top: -8em; }
+  84% { top: -8em; }
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+@keyframes move {
+  0%  { top:  -0.7em; }
+  4%  { top:  -0.7em; }
+  16% { top: -2.2em; }
+  20% { top: -2.2em; }
+  32% { top: -3.7em; }
+  36% { top: -3.7em; }
+  48% { top: -5.2em; }
+  51% { top: -5.2em; }
+  64% { top: -6.7em; }
+  68% { top: -6.7em; }
+  80% { top: -8.2em; }
+  84% { top: -8.2em; }
+  }
+}
