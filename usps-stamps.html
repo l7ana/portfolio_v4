@@ -102,7 +102,7 @@
                     <p>This series of USPS Stamps was designed for a group project. My group members and I worked
                         together to decide a visual concept, illustrate, and then design the stamps together. We chose a
                         shared interest as our concept: gemstones.</p>
-                    <div class="arrow-down">
+                    <div class="arrow-down hide-mobile">
                         <a href="#process" class="scroll">
                             The Process
                             <svg width="26" height="13">
@@ -131,7 +131,7 @@
     <section class="case-study" id="process">
         <div class="container">
             <div class="row no-margin">
-                <div class="column one-whole text-centered">
+                <div class="column one-whole text-centered" data-inview="no">
                     <h2>The Process</h2>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                         and <a href="" target="_blank">Mony</a></p>
                 </div>
                 <div class="column two-thirds">
-                    <div class="swiper-container" id="gems-swiper">
+                    <div class="swiper-container with-caption">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="swiper-image">
@@ -224,54 +224,59 @@
 
     <section id="other">
         <div class="container">
-            <div class="row no-margin">
+            <div class="row">
                 <div class="column one-half centered text-centered">
                     <h2 class="sectionhead">Room for More?</h2>
                     <p>Here are more projects for you to check out.</p>
                 </div>
             </div>
-        </div>
-        <div class="swiper-container swiper-thumbs">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="natura-brochure.html">
-                        <img src="./img/1x1/natura_1x1.jpg" alt="natura insects brochure">
-                </div>
-                <div class="swiper-slide">
-                    <a href="shabp.html">
-                        <img src="./img/1x1/shabpenamel_1x1.jpg" alt="Small Hands Against Big Phones">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="twoladies.html">
-                        <img src="./img/1x1/2ladies_1x1.jpg" alt="Two Ladies Kitchen Box">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="fohr.html">
-                        <img src="./img/1x1/fohr_1x1.jpg" alt="friends of hawaii robotics">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="copenhagen-logo.html">
-                        <img src="./img/1x1/copen_1x1.jpg" alt="Copenhagen City Tourism Logo">
-                    </a>
-                </div>
-                <div class="swiper-slide">
+            <div class="card-row">
+                <div class="card" data-inview="no">
                     <a href="kpc.html">
-                        <img src="./img/1x1/kpc-mockup_1x1-2.jpg" alt="Kahili Pet Center">
-
-                        <small class="award-label">
-                            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
-                                background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
-                            </lottie-player>
-                        </small>
+                        <div class="card-img"><img src="./img/1x1/kpc-mockup_1x1-2.jpg" alt=""><small
+                                class="meta-label digital">
+                                Digital
+                            </small>
+                            <small class="award-label">
+                                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                    background="transparent" speed="1" style="width: 60%; height: 60%;" loop autoplay>
+                                </lottie-player>
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Kalihi Pet Center Website Redesign</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="shabp.html">
+                        <div class="card-img"><img src="./img/1x1/shabpenamel_1x1.jpg" alt=""><small
+                                class="meta-label identity">
+                                Identity
+                            </small></div>
+                        <div class="card-info">
+                            <h3>Small Hands Against Big Phones</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="triology-bookcovers.html">
+                        <div class="card-img"><img src="./img/1x1/bookcovers_1x1.jpg" alt="">
+                            <small class="meta-label printed">
+                                Print
+                            </small>
+                            <small class="award-label">
+                                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                    background="transparent" speed="1" style="width: 60%; height: 60%;" loop autoplay>
+                                </lottie-player>
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>This is Love Triology Book Covers</h3>
+                        </div>
                     </a>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
     </section>
 
@@ -299,6 +304,8 @@
     <script src="js/scroll.js"></script>
     <!-- Main -->
     <script src="js/script.js"></script>
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -326,26 +333,10 @@
             },
         });
 
-        var swiper2 = new Swiper('.swiper-thumbs', {
-            slidesPerView: 3,
-            spaceBetween: 0,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
     </script>
     <script>
         let options = {
-            rootMargin: "-100px 0px -100px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {

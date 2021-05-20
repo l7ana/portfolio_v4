@@ -155,12 +155,38 @@
         </div>
     </section>
     <section class="case-study">
-        <div class="swiper-container">
+        <div class="swiper-container" id="fohr-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/fohr/SiteMap.svg" alt="Old SiteMap vs. New SiteMap"></div>
-                <div class="swiper-slide"><img src="./img/fohr/LofiHome.svg" alt="LoFi Homepage Wireframes"></div>
-                <div class="swiper-slide"><img src="./img/fohr/StyleTiles.svg"
-                        alt="Style Tile 3# was chosen out of 3 Style Tiles"></div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./img/fohr/fohr_SiteMap_small.svg">
+                        <source media="(min-width:1050px)" srcset="./img/fohr/fohr_SiteMap.svg">
+                        <img src="./img/fohr/fohr_SiteMap.svg" alt="">
+                    </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Old SiteMap vs. New SiteMap</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./img/fohr/fohr_LofiHome_small.svg">
+                        <source media="(min-width:1050px)" srcset="./img/fohr/fohr_LofiHome.svg">
+                        <img src="./img/fohr/fohr_LofiHome.svg" alt="">
+                    </picture>
+                    <div class="swiper-text">
+                        <p class="caption">LoFi Homepage Wireframes</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./img/fohr/fohr_StyleTiles_small.svg">
+                        <source media="(min-width:1050px)" srcset="./img/fohr/fohr_StyleTiles.svg">
+                        <img src="./img/fohr/fohr_StyleTiles.svg" alt="">
+                    </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Style Tile 3# was chosen out of 3 Style Tiles</p>
+                    </div>
+                </div>
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
@@ -187,8 +213,8 @@
     </section>
     <section class="case-study" id="fohr-notes" data-inview="no">
         <div class="container">
-            <div class="row">
-                <div class="column three-fourths" data-inview="no">
+            <div class="row with-img">
+                <div class="column two-thirds" data-inview="no">
                     <h2>Final Notes</h2>
                     <p>Creating the rest of the site's subpages felt like bringing the spirit of a robotics competition
                         to life. The sense of community and excitement I used to feel in highschool shone through the
@@ -199,9 +225,11 @@
                         using my
                         skills for good.</p>
                 </div>
-                <column class="one-fourth">
-                    <!-- <img src="img/fohr/3008.png" alt="">
-                    <p class="caption">My High School Robotics Team Logo</p> -->
+                <column class="one-third">
+                    <img src="img/fohr/o69pur.jpg" alt="A photo from 2014 when my team was congradulated for
+                    winning Hawai‘i Regional.">
+                    <p class="caption">A photo from 2014 when my team was congradulated for
+                        winning Hawai‘i Regional.</p>
                 </column>
             </div>
         </div>
@@ -209,54 +237,54 @@
 
     <section id="other">
         <div class="container">
-            <div class="row no-margin">
+            <div class="row">
                 <div class="column one-half centered text-centered">
                     <h2 class="sectionhead">Room for More?</h2>
                     <p>Here are more projects for you to check out.</p>
                 </div>
             </div>
-        </div>
-        <div class="swiper-container swiper-thumbs">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="natura-brochure.html">
-                        <img src="./img/1x1/natura_1x1.jpg" alt="natura insects brochure">
+            <div class="card-row">
+                <div class="card" data-inview="no">
+                    <a href="prime.html">
+                        <div class="card-img"><img src="./img/1x1/prime_1x1.svg" alt=""><small
+                                class="meta-label digital">
+                                Digital
+                            </small>
+                            <small class="award-label">
+                                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                    background="transparent" speed="1" loop autoplay>
+                                </lottie-player>
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Prime Mobile App</h3>
+                        </div>
+                    </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="card" data-inview="no">
                     <a href="shabp.html">
-                        <img src="./img/1x1/shabpenamel_1x1.jpg" alt="Small Hands Against Big Phones">
+                        <div class="card-img"><img src="./img/1x1/shabpenamel_1x1.jpg" alt=""><small
+                                class="meta-label identity">
+                                Identity
+                            </small></div>
+                        <div class="card-info">
+                            <h3>The Small Hands Against Big Phones Club</h3>
+                        </div>
                     </a>
                 </div>
-                <div class="swiper-slide">
-                    <a href="twoladies.html">
-                        <img src="./img/1x1/2ladies_1x1.jpg" alt="Two Ladies Kitchen Box">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="fohr.html">
-                        <img src="./img/1x1/fohr_1x1.jpg" alt="friends of hawaii robotics">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="copenhagen-logo.html">
-                        <img src="./img/1x1/copen_1x1.jpg" alt="Copenhagen City Tourism Logo">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="kpc.html">
-                        <img src="./img/1x1/kpc-mockup_1x1-2.jpg" alt="Kahili Pet Center">
-
-                        <small class="award-label">
-                            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
-                                background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
-                            </lottie-player>
-                        </small>
+                <div class="card" data-inview="no">
+                    <a href="natura-brochure.html">
+                        <div class="card-img"><img src="./img/1x1/natura_1x1.jpg" alt="">
+                            <small class="meta-label printed">
+                                Print
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Natura Insects Exhibit Brochure</h3>
+                        </div>
                     </a>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
     </section>
 
@@ -332,7 +360,7 @@
     </script>
     <script>
         let options = {
-            rootMargin: "-100px 0px -100px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {

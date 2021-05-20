@@ -261,9 +261,25 @@
         </div>
         <div class="swiper-container" id="hs-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/havensolus/HS_pattern1.svg" alt="Old SiteMap vs. New SiteMap">
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./img/havensolus/HS_pattern1_small.svg">
+                        <source media="(min-width:1050px)" srcset="./img/havensolus/HS_pattern1.png">
+                        <img src="./img/havensolus/HS_pattern1.png" alt="">
+                    </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Wood Pattern</p>
+                    </div>
                 </div>
-                <div class="swiper-slide"><img src="./img/havensolus/HS_pattern2.svg" alt="LoFi Homepage Wireframes">
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(max-width:767px)" srcset="./img/havensolus/HS_pattern2_small.svg">
+                        <source media="(min-width:1050px)" srcset="./img/havensolus/HS_pattern2.png">
+                        <img src="./img/havensolus/HS_pattern2.png" alt="">
+                    </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Tile Pattern</p>
+                    </div>
                 </div>
             </div>
             <!-- Add Arrows -->
@@ -316,7 +332,59 @@
                 </div>
             </div>
         </div>
+    </section>
 
+    <section id="other">
+        <div class="container">
+            <div class="row">
+                <div class="column one-half centered text-centered">
+                    <h2 class="sectionhead">Room for More?</h2>
+                    <p>Here are more projects for you to check out.</p>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card" data-inview="no">
+                    <a href="kpc.html">
+                        <div class="card-img"><img src="./img/1x1/kpc-mockup_1x1-2.jpg" alt=""><small
+                                class="meta-label digital">
+                                Digital
+                            </small>
+                            <small class="award-label">
+                                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                    background="transparent" speed="1" loop autoplay>
+                                </lottie-player>
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Kalihi Pet Center Website Redesign</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="shabp.html">
+                        <div class="card-img"><img src="./img/1x1/shabpenamel_1x1.jpg" alt=""><small
+                                class="meta-label identity">
+                                Identity
+                            </small></div>
+                        <div class="card-info">
+                            <h3>The Small Hands Against Big Phones Club</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="usps-stamps.html">
+                        <div class="card-img"><img src="./img/1x1/gems_v1.gif" id="card-gems" alt="USPS Gem Stamps">
+                            <small class="meta-label printed">
+                                Print
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>USPS Gemstone Stamps</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -369,40 +437,6 @@
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
-
-            // on init set light / dark
-            on: {
-                init: function () {
-                    console.log('swiper initialized');
-                    const initialswiper = document.querySelector('.swiper-container');
-                    const initialslide = document.querySelector('.swiper-slide-active');
-                    const initialheader = document.querySelector('.site-header');
-                    if (initialslide.classList.contains('dark')) {
-                        initialswiper.setAttribute('data-slidecolor', 'dark');
-                        initialheader.setAttribute('data-slidecolor', 'dark');
-                    } else {
-                        initialswiper.setAttribute('data-slidecolor', 'light');
-                        initialheader.setAttribute('data-slidecolor', 'light');
-                    }
-                },
-            },
-        });
-
-        const myswiper = document.querySelector('.swiper-container');
-        const myheader = document.querySelector('.site-header');
-
-        swiper.on('transitionEnd', function () {
-            console.log('slide changed');
-            const activeslide = document.querySelector('.swiper-slide-active');
-            if (activeslide.classList.contains('dark')) {
-                console.log('this slide is dark');
-                myswiper.setAttribute('data-slidecolor', 'dark');
-                myheader.setAttribute('data-slidecolor', 'dark');
-            } else {
-                console.log('this slide is light');
-                myswiper.setAttribute('data-slidecolor', 'light');
-                myheader.setAttribute('data-slidecolor', 'light');
-            }
         });
 
     </script>
@@ -410,7 +444,7 @@
     <script>
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         let options = {
-            rootMargin: "-50px 0px -50px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {

@@ -121,20 +121,7 @@
             </div>
         </div>
     </section>
-    <section id="copen-quote">
-        <div class="row no-margin">
-            <div class="quote-box column one-half" data-inview="no">
-                <p class="pull-quote">
-                    <span>Hygge&mdash;</span>the pursuit of everyday happiness&mdash;is engrained in Danish culture.
-                </p>
-                <a href="https://www.youtube.com/watch?v=Pl74ybpyNLk&ab_channel=VICENews" class="button-white">Learn
-                    about Hygge</a>
-            </div>
-            <div class="quote-image column one-half" data-inview="no">
-                <img src="img/copenhagen-logo/tivoli_1.jpg" alt="">
-            </div>
-        </div>
-    </section>
+
     <section class="case-study to-white" id="copenhagen-inspo">
         <div class="container">
             <div class="row" data-inview="no">
@@ -184,11 +171,12 @@
         </div>
     </section>
 
-    <section id="copen-sketches">
+    <section id="copen-sketches" class="case-study">
         <div class="container">
-            <div class="row">
-                <div class="column three-fourths"></div>
-                <div class="column one-fourth" data-inview="no">
+            <div class="row with-img">
+                <div class="column two-thirds" data-inview="no"><img src="img/copenhagen-logo/sketches_4.jpg" alt="">
+                </div>
+                <div class="column one-third" data-inview="no">
                     <h2>Sketches</h2>
                     <p>While sketching, I developed a mark that felt kinetic like the movement of a city and
                         mirrored
@@ -200,13 +188,103 @@
 
     <section id="copen-bottom" data-inview="no">
         <div class="container">
-            <div class="row">
-                <div class="column one-whole text-centered" data-inview="no">
-                    <h2>Final Result</h2>
+            <div class="row with-img">
+                <div class="column one-half" data-inview="no">
+                    <h2>Results</h2>
+                    <p>Copenhagen has survived plagues, fires, pirate-attacks, and their winters are extremely dark and
+                        cold. Yet, Copenhagen continues to be an ambitious leader in many ways: Copenhagen is one of the
+                        few carbon-neutral cities in the world with water clean enough to swim in, it's a hub of modern
+                        design & architechture, and it continues to rank as one of the <a
+                            href="https://worldhappiness.report/ed/2020/cities-and-happiness-a-global-ranking-and-analysis/">happiest
+                            cities in the world.</a> </p>
+                    <p>The final logo's shapes elicit a sense of advancement and honor an icon of Danish design.
+                        Meanwhile, the colors hum quaintly with joy to reflect Copenhagen's optimism and the spirit of
+                        <i>hygge.</i>
+                    </p>
+                </div>
+                <div class="column one-half">
+                    <div class="swiper-container with-caption">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="./img/copenhagen-logo/copenhagen_color.svg" alt="">
+                                </div>
+                                <div class="swiper-text">
+                                    <p class="caption">Color</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"><img src="./img/copenhagen-logo/copenhagen_bw.svg" alt="">
+                                    <div class="swiper-text">
+                                        <p class="caption">Black and White</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <img src="img/copenhagen-logo/copenlogo_2ver.svg" alt="final logo">
+    </section>
+
+    <section id="other">
+        <div class="container">
+            <div class="row">
+                <div class="column one-half centered text-centered">
+                    <h2 class="sectionhead">Room for More?</h2>
+                    <p>Here are more projects for you to check out.</p>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card" data-inview="no">
+                    <a href="prime.html">
+                        <div class="card-img"><img src="./img/1x1/prime_1x1.svg" alt=""><small
+                                class="meta-label digital">
+                                Digital
+                            </small>
+                            <small class="award-label">
+                                <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_4nvqbm44.json"
+                                    background="transparent" speed="1" loop autoplay>
+                                </lottie-player>
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Prime Mobile App</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="haven-solus.html">
+                        <div class="card-img">
+                            <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_4nqq6e1q.json"
+                                background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay
+                                class="card-img"></lottie-player><small class="meta-label identity">
+                                Identity
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Haven Solus Resort</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-inview="no">
+                    <a href="natura-brochure.html">
+                        <div class="card-img"><img src="./img/1x1/natura_1x1.jpg" alt="">
+                            <small class="meta-label printed">
+                                Print
+                            </small>
+                        </div>
+                        <div class="card-info">
+                            <h3>Natura Insects Exhibit Brochure</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -227,9 +305,14 @@
         </div>
     </footer>
 
+    <!-- Scroll JS -->
+    <script src="js/scroll.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Main -->
     <script src="js/script.js"></script>
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -255,46 +338,13 @@
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
-
-            // on init set light / dark
-            on: {
-                init: function () {
-                    console.log('swiper initialized');
-                    const initialswiper = document.querySelector('.swiper-container');
-                    const initialslide = document.querySelector('.swiper-slide-active');
-                    const initialheader = document.querySelector('.site-header');
-                    if (initialslide.classList.contains('dark')) {
-                        initialswiper.setAttribute('data-slidecolor', 'dark');
-                        initialheader.setAttribute('data-slidecolor', 'dark');
-                    } else {
-                        initialswiper.setAttribute('data-slidecolor', 'light');
-                        initialheader.setAttribute('data-slidecolor', 'light');
-                    }
-                },
-            },
-        });
-
-        const myswiper = document.querySelector('.swiper-container');
-        const myheader = document.querySelector('.site-header');
-
-        swiper.on('transitionEnd', function () {
-            console.log('slide changed');
-            const activeslide = document.querySelector('.swiper-slide-active');
-            if (activeslide.classList.contains('dark')) {
-                console.log('this slide is dark');
-                myswiper.setAttribute('data-slidecolor', 'dark');
-                myheader.setAttribute('data-slidecolor', 'dark');
-            } else {
-                console.log('this slide is light');
-                myswiper.setAttribute('data-slidecolor', 'light');
-                myheader.setAttribute('data-slidecolor', 'light');
-            }
         });
 
     </script>
+
     <script>
         let options = {
-            rootMargin: "-100px 0px -5px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {

@@ -18,6 +18,7 @@ h2, h3 {
   margin: 0;
   color: $navy-2;
   font-variant-ligatures: common-ligatures;
+  hanging-punctuation: first;
 }
 
 h1 {
@@ -29,7 +30,6 @@ h1 {
   font-variant-ligatures: common-ligatures;
   hanging-punctuation: first;
 }
-
 
 h2 {
     font-size: 4em;

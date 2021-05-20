@@ -169,11 +169,11 @@ footer .footer-nav ul {
 /*Secctions*/
 
 #above-work {
-  padding: 3em 0 1em 0;
+  padding: 2em 0 1em 0;
   // width: 100%;
   background-color: $navy;
   color: white;
-  height: 52vh;
+  height: 35vh;
   h2.sectionhead {color: white; margin: 0 0 -1em 0;}
   .container {width: 100%;}
 }
@@ -250,18 +250,11 @@ footer .footer-nav ul {
   .button-gold.blink {margin-right: 0;}
 }
 
-#more {
-  background:$white-1;
-  padding: 2em 0;
-  .sectionhead {margin-top: 2em;}
-  .card-row {margin-bottom: 4em;}
-}
-
 #other {
   background: $white-1;
-  padding: 2em 0 0 0;
+  padding: 2em 0;
   margin: 0;
-  .sectionhead {margin-top: 2em;}
+  .sectionhead {margin-top: 1em;}
 }
 
 .cta-link-to {

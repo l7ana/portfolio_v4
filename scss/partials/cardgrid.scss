@@ -17,49 +17,87 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-      }  
-      .card.horizontal {
-        flex-direction: row;
-      } 
-  }
-
-  @media (min-width: 768px) {
+      }
     .card {
       margin: 0%;
       width: 47.5%;
-      h3, p {color: $navy-2;}
       }
-    // .card.horizontal {
-    //     margin: 0%;
-    //     width: 100%;
-    //     display: flex;
-    //     .card-img,
-    //     .card-info {width: 100%;}
-    // }
   }
 
-  .meta-label {
-    color: white;
-    font-family: $type-body;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: .5px;
-    text-decoration: none;
-    position: absolute;
-    z-index: 3;
-    bottom: 0; left: 0;
-    padding: .7em 1em;
-    &.digital {background-color: $turq;}
-    &.printed {background: $gold;}
-    &.identity {background: $rust;}
+  .card {
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    // flex-direction: column;
+    box-shadow: none;
+    margin: 2% 0;
+    .card-img {
+      overflow: hidden;
+      position: relative;
+      img, lottie-player {
+        transform: scale(1.05);
+        transition: transform 1s cubic-bezier(.32,0,.77,1);
+        z-index: 2;
+      } 
+    }
+    .card-info { 
+        padding: 30px;
+        background-color: rgb(255, 255, 255);
+        flex-grow: 1;
+     }
+     h3, p {color: $navy-2;}
   }
-  .award-label {
-    position:absolute;
-    z-index: 3;
-    top: 0; right: 0;
-    // margin: 1em;
-    // box-shadow: inset 5px 5px 20px rgba(white,.5), inset -5px -5px 20px rgba(white,0.5);
+
+ #other .card-row {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #other .card {
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    a {
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      .card-img {width: 50%;  margin: 0; }
+      .card-info {
+        background-color: transparent;
+        padding:0 5%; margin: 0;
+        width: 50%;
+      }
+      h3 {font-size: clamp(1.5em,3vw,2.5em);}
+    }
+    @media (min-width: $breakpoint-x-small +50px) {
+      margin: 0;
+      flex-direction: column;
+      width: 30%;
+      background-color: transparent;
+      a {
+        flex-direction: column;
+        align-items: flex-start;
+        .card-info, .card-img {width: 100%;}
+        .card-info {padding: 5% 0;}
+      }
+    }
+  }
+
+  #other .card:hover { box-shadow: none;}
+
+
+  .card:hover {
+    cursor: pointer;
+    h3 {color: $turq;}
+    .card-img {
+      img {
+        transform: scale(1.1);
+        transform-origin:center;
+      }
+    }
+    box-shadow: 3px 7px 10px rgba($navy-2,.1), 0 10px 10px rgba($navy-2,0.08);
   }
 
   .big-card {
@@ -127,53 +165,32 @@
     }
   }
 
-  .card {
-    transition: all .3s ease;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    box-shadow: none;
-    margin: 2% 0;
-    .card-img {
-      overflow: hidden;
-      position: relative;
-      img, lottie-player {
-        transform: scale(1.05);
-        transition: transform 1s cubic-bezier(.32,0,.77,1);
-        z-index: 2;
-      }
-      
-    }
-    // &:nth-child(2) {margin-right: 1%;}
-    .card-info { 
-        padding: 30px;
-        background-color: rgb(255, 255, 255);
-        flex-grow: 1;
-     }
+  .meta-label {
+    color: white;
+    font-family: $type-body;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .5px;
+    text-decoration: none;
+    position: absolute;
+    z-index: 3;
+    bottom: 0; left: 0;
+    padding: .5em .7em;
+    &.digital {background-color: $turq;}
+    &.printed {background: $gold;}
+    &.identity {background: $rust;}
   }
-  // .card.horizontal {margin: 2% 0;}
 
-  .card:hover {
-    cursor: pointer;
-    h3 {color: $turq;}
-    .card-img {
-      img {
-        transform: scale(1.1);
-        transform-origin:center;
-      }
-    }
-    box-shadow: 3px 7px 10px rgba($navy-2,.1), 0 10px 10px rgba($navy-2,0.08);
+  .award-label {
+    position:absolute;
+    z-index: 3;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    padding: 0;
   }
-  
-  // #digital {
-  //   background-color: $white-1;
-  // }
 
-  // #branding {
-  //   background-color: $navy;
-  //   h2 {color: white;}
-  // }
-
-  // #printed {
-  //   background-color: rgba($rust,.05);
-  // }
+  @media (min-width: $breakpoint-medium) {
+    .award-label {width: 100px; height: 100px;}
+    .meta-label {font-size: 14px; padding: .7em 1em;}
+  }

@@ -1,0 +1,291 @@
+/* SUBPAGE STRUCTURE
+----------------------------
+    Kalihi Pet Center
+    Honolulu City Flag
+    Copenhagen City Logo
+    Friends of Hawai‘i Robotics
+    Two Ladies Kitchen Logo
+    Prime Mobile App
+    "This is Love" Triology Book Covers
+    Haven Solus Resort and Spa
+    Small Hands Against Big Phones
+    USPS Gemstone Stamps
+------------------------------ */
+
+/*KPC*/
+#kpc-intro {
+    .row {margin-bottom: 15%;}
+  }
+  
+  #kpc-to-slider {
+    background-image: linear-gradient(white, rgb(235,245,247));
+    margin: 7em 0 0 0;
+  }
+  
+  #kpc-notes {
+    // background-image: url(../img/kpc/mushu.png);
+    // background-size: 370px;
+    // background-repeat: no-repeat;
+    margin-bottom: 0;
+    // background-position: left bottom;
+  }
+  
+  #kpc-ani {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    .one-third {text-align: center;}
+    p.caption {margin-top: -1em;}
+  }
+  
+  #kpc-cta {
+    text-align: center;
+    background-color:#ff6e6d;
+    h3 {
+      margin: 0;
+      color: white;
+    }
+  }
+
+/*City Flag*/
+  .project-top.city-flag {
+    background-image: url('../img/cityflag/honolulumap_2.jpg');
+    // background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 0%;
+    // h1, p {
+    //   color: white;
+    // }
+  }
+  
+  /*Copenhagen*/
+  #copenhagen-inspo {
+    margin-bottom: 0;
+  }
+  #copen-sketches {
+    h2 {margin-top: 3em;}
+    background-image: url(../img/copenhagen-logo/sketches_3.jpg);
+    background-size: 100%;
+    // height: 50%;
+    max-height: 600px;
+    background-repeat: no-repeat;
+  }
+  #copen-quote {
+    background-color: $navy;
+    margin-bottom: 8em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .quote-box {
+      margin: 0 0 0 11.25%;
+      p.pull-quote {
+        color: white;
+        margin-top: 3em
+      } 
+      .pull-quote::before {
+        color: rgba(white,.2);
+        margin-left: -17%;
+        margin-bottom: -18%;
+      }
+    }
+    a.button-white {margin: 5em 0 0 .2em;}
+  }
+  #copen-bottom {
+    h2 {margin-top: 2em;}
+    .row {margin-bottom: 2em;}
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+ /*FOHR*/
+  #fohr-to-slider {
+    background-image: linear-gradient(white, rgba(245,168,28, .05));
+    margin: 0;
+  }
+  #fohr-notes {
+    // background-image: url(../img/fohr/3008.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: 90% 30%;
+  }
+  
+  #natura-bottom {
+    img {width: 100%;}
+    margin: 0 0 5em 0;
+  }
+  
+/*Two Ladies Kitchen*/
+  // #twoladies-divider {
+  //   height: auto;
+  //   margin: 0 0 5em 0;
+  // }
+  #twoladies-sketch {
+    h2 {margin-top: 2em;}
+    background-image: url(../img/2ladies/twoladies_sketches.jpg);
+    background-size: cover;
+    max-height: 600px;
+    background-repeat: no-repeat;
+  }
+  #twoladies-sketchdetails {
+    margin: 5em 0;
+    img {width: 75%;}
+  }
+  #twoladies-dev {
+    background-image: linear-gradient(rgba(#30261D, .05), white);
+    // background-color: rgba(#30261D, .1);
+    padding: 8em 0 5em 0;
+  }
+  #twoladies-quote {
+    background-color: $rust;
+    margin-bottom: 8em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .quote-box {
+      margin: 0 0 0 11.25%;
+      p.pull-quote {
+        color: white;
+        margin-top: 3em;
+        font-size: clamp(1.5em, 4vw, 4em); 
+      } 
+      .pull-quote::before {
+        color: rgba(white,.2);
+        margin-left: -17%;
+        margin-bottom: -18%;
+      }
+    }
+  }
+  
+/*Prime*/
+  #prime-video {margin-bottom: 8em;}
+  
+  #to-prime-swiper {
+    background-image: linear-gradient(white, #FCFCFC);
+    margin: 8em 0 0 0; padding: 0;
+  }
+  
+  #prime-quote {
+    // background-color: rgba(#c39d4d, .07);
+    background-image: linear-gradient(rgba(#c39d4d, .08), white);
+    width: 100%;
+    margin: 5em 0;
+    display: flex;
+    align-items: center;
+    .quote-box {
+      // margin: 0 0 0 11.25%;
+      p.pull-quote {
+        color: #2d0043;      
+        font-size: clamp(1.5em, 4vw, 4em); 
+      } 
+      .pull-quote::before {
+        color: rgba(#c39d4d, .1);
+        margin-left: -19%;
+        margin-bottom: -15%;
+      }
+      p.caption {
+        margin-top: 4em;
+        color: #902800;
+      }
+    }
+    p {margin-top: 2em;}
+  }
+  
+ /*Book Covers*/
+  #book-rationale {
+    margin: 0;
+    h2 {margin-top: 1em;}
+    .arrow-down {
+      position: static;
+      margin-top: 2em;
+    }
+  }
+  #book-video {
+    height: auto;
+  }
+  
+  /*Haven Solus*/
+  #hs-brand {
+    background-color: rgba(#E5DED6, 0.5);
+    color: #6B645D;
+    h2, h3 {color: #6B645D;}
+    h2 {margin-top: 1em;}
+  }
+  
+  p.core {
+    font-size: 2em;
+    line-height: 1.3;
+    font-family: $type-subhead;
+    font-style:italic;
+    margin-bottom: 1em;
+  }
+  
+  #hs-quotes {
+    p {
+      // font-family: $type-subhead;
+      hanging-punctuation: first;
+    }
+    span.name {
+      font-family: $type-subhead;
+      font-weight: 400;
+      font-feature-settings: 'smcp';
+    }
+  }
+  
+  #hs-deliverables {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+/*Small Hands Against Big Phones*/
+  #shabp-brand {
+    background-color: rgb(2, 33, 24);
+    color: white;
+    padding: 2em 0;
+    .row {margin: 1em 0;}
+    h2 {color: rgb(253,0,251);}
+    h3 {color: rgb(0,255,188);}
+    .column.one-third h3:nth-child(2) {
+      margin-top: 1em;
+    }
+    ul.bulleted li::before {color: rgb(250, 223, 9);}
+  }
+  
+  #shabp-printed {
+    background-color: rgb(2,50,35);
+    margin-bottom: 0;
+    h2 {
+      color: white;
+      margin-top: 1em;
+    }
+    h3 {color: rgb(253,0,251);}
+  }
+  #shabp-digital {
+    background-color: rgb(2, 33, 24);
+    margin-bottom: 0;
+    p {color: white;}
+    h2 {
+      color: white;
+      margin-top: 1em;
+    }
+    h3 {color: rgb(0,255,188);}
+  }
+  
+/*Gems*/
+#stamps-intro {
+  margin: 0 0 5em 0;
+  padding: 5em 0 1em 0;
+}
+
+  #gems-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /*Kinetic Type*/
+  
+section#kinetic-project-top {
+    background-color: #45C8F5;
+}

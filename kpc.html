@@ -168,33 +168,34 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <!-- <img srcset="
-                    ./img/kpc/SiteMap_small.svg 300w,
-                    ./img/kpc/SiteMap_med.svg 768w,
-                    ./img/kpc/4x1/SiteMap.svg 1050w" sizes="(max-width:300px) 300px, 768px"
-                        src="./img/kpc/4x1/SiteMap.svg" alt=""> -->
                     <picture>
                         <source media="(max-width:767px)" srcset="./img/kpc/SiteMap_small.svg">
-                        <!-- <source media="(min-width:768px)" srcset="./img/kpc/SiteMap_med.svg"> -->
-                        <source media="(min-width:1050px)" srcset="./img/kpc/4x1/SiteMap.svg">
+                        <source media="(min-width:1050px)" srcset="./img/kpc/SiteMap.svg">
                         <img src="./img/kpc/4x1/SiteMap.svg" alt="">
                     </picture>
+                    <div class="swiper-text">
+                        <p class="caption">SiteMap</p>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <picture>
                         <source media="(max-width:767px)" srcset="./img/kpc/LofiHome_small.svg">
-                        <!-- <source media="(min-width:768px)" srcset="./img/kpc/LofiHome_med.svg"> -->
-                        <source media="(min-width:1050px)" srcset="./img/kpc/4x1/LofiHome.svg">
+                        <source media="(min-width:1050px)" srcset="./img/kpc/LofiHome.svg">
                         <img src="./img/kpc/4x1/LofiHome.svg" alt="">
                     </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Low Fidelity Home Pages</p>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                     <picture>
                         <source media="(max-width:767px)" srcset="./img/kpc/LofiWireframes_small.svg">
-                        <!-- <source media="(min-width:768px)" srcset="./img/kpc/LofiWireframes_med.svg"> -->
-                        <source media="(min-width:1050px)" srcset="./img/kpc/4x1/LofiWireframes.svg">
+                        <source media="(min-width:1050px)" srcset="./img/kpc/LofiWireframes.svg">
                         <img src="./img/kpc/4x1/LofiWireframes.svg" alt="">
                     </picture>
+                    <div class="swiper-text">
+                        <p class="caption">Low Fidelity Wireframes</p>
+                    </div>
                 </div>
             </div>
             <!-- Add Arrows -->
@@ -416,7 +417,7 @@
     <script>
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         let options = {
-            rootMargin: "-50px 0px -50px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {

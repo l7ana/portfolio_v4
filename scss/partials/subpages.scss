@@ -65,12 +65,9 @@
     margin-bottom: 0;
   }
   #copen-sketches {
-    h2 {margin-top: 3em;}
-    background-image: url(../img/copenhagen-logo/sketches_3.jpg);
-    background-size: 100%;
-    // height: 50%;
-    max-height: 600px;
-    background-repeat: no-repeat;
+    background-color: $navy;
+    padding: 5em 0;
+    h2,p {color: white;}
   }
   #copen-quote {
     background-color: $navy;
@@ -92,12 +89,6 @@
     }
     a.button-white {margin: 5em 0 0 .2em;}
   }
-  #copen-bottom {
-    h2 {margin-top: 2em;}
-    .row {margin-bottom: 2em;}
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
   
  /*FOHR*/
   #fohr-to-slider {
@@ -105,30 +96,30 @@
     margin: 0;
   }
   #fohr-notes {
-    // background-image: url(../img/fohr/3008.png);
-    background-size: 200px;
-    background-repeat: no-repeat;
-    margin-bottom: 0;
-    background-position: 90% 30%;
+    img {margin: 0;}
   }
   
   #natura-bottom {
     img {width: 100%;}
     margin: 0 0 5em 0;
   }
+
+  // rgba(48,38,29,.4)
   
 /*Two Ladies Kitchen*/
-  // #twoladies-divider {
-  //   height: auto;
-  //   margin: 0 0 5em 0;
-  // }
-  #twoladies-sketch {
-    h2 {margin-top: 2em;}
-    background-image: url(../img/2ladies/twoladies_sketches.jpg);
-    background-size: cover;
-    max-height: 600px;
-    background-repeat: no-repeat;
+#twoladies-story {
+  background-color: #f5f4f4;
+  color: rgba(48,38,29,1);
+  padding: 4em 0 2em 0;
+  h2 {color: #AA182C;}
+  h3 {color: rgba(48,38,29,1);}
+  ul.bulleted {padding-left: 1.5em;}
+  ul.bulleted li::before {
+    font-family: $type-body;
+    content: "\2665";
+    color: #AA182C;
   }
+}
   #twoladies-sketchdetails {
     margin: 5em 0;
     img {width: 75%;}
@@ -138,25 +129,8 @@
     // background-color: rgba(#30261D, .1);
     padding: 8em 0 5em 0;
   }
-  #twoladies-quote {
-    background-color: $rust;
-    margin-bottom: 8em;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    .quote-box {
-      margin: 0 0 0 11.25%;
-      p.pull-quote {
-        color: white;
-        margin-top: 3em;
-        font-size: clamp(1.5em, 4vw, 4em); 
-      } 
-      .pull-quote::before {
-        color: rgba(white,.2);
-        margin-left: -17%;
-        margin-bottom: -18%;
-      }
-    }
+  #twoladies-bottom {
+    margin-bottom: 0; padding-bottom: 3em;
   }
   
 /*Prime*/
@@ -243,7 +217,7 @@
   #shabp-brand {
     background-color: rgb(2, 33, 24);
     color: white;
-    padding: 2em 0;
+    padding: 5em 0;
     .row {margin: 1em 0;}
     h2 {color: rgb(253,0,251);}
     h3 {color: rgb(0,255,188);}
@@ -253,24 +227,21 @@
     ul.bulleted li::before {color: rgb(250, 223, 9);}
   }
   
+  #shabp-printed,
+  #shabp-digital {
+    padding: 5em 0;
+    margin-bottom: 0;
+    h2 {color: white;}
+  }
   #shabp-printed {
     background-color: rgb(2,50,35);
-    margin-bottom: 0;
-    h2 {
-      color: white;
-      margin-top: 1em;
-    }
+    
     h3 {color: rgb(253,0,251);}
   }
   #shabp-digital {
     background-color: rgb(2, 33, 24);
-    margin-bottom: 0;
-    p {color: white;}
-    h2 {
-      color: white;
-      margin-top: 1em;
-    }
     h3 {color: rgb(0,255,188);}
+    p {color: white;}
   }
   
 /*Gems*/
@@ -282,10 +253,11 @@
   #gems-bottom {
     margin-bottom: 0;
     padding-bottom: 0;
+    .column.one-third {min-width: 20em;}
   }
 
   /*Kinetic Type*/
   
-section#kinetic-project-top {
+  section#kinetic-project-top {
     background-color: #45C8F5;
-}
+  }

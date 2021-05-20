@@ -200,17 +200,22 @@
     </section>
 
     <section class="case-study" id="book-swiper">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_1.jpg" alt=""></div>
-                <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_2.jpg" alt=""></div>
-                <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_3.jpg" alt=""></div>
+        <div class="row no-margin">
+            <div class="column three-fourths centered">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_1.jpg" alt=""></div>
+                        <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_2.jpg" alt=""></div>
+                        <div class="swiper-slide dark"><img src="./img/triologybooks/ThisIsLove_3.jpg" alt=""></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -244,34 +249,27 @@
     <!-- Initialize Swiper -->
     <script>
         const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 30,
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
-                clickable: true,
             },
+
+            effect: 'slide',
+
+            // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        });
 
-        const myswiper = document.querySelector('.swiper-container');
-        const myheader = document.querySelector('.site-header');
-
-        swiper.on('transitionEnd', function () {
-            console.log('slide changed');
-            const activeslide = document.querySelector('.swiper-slide-active');
-            if (activeslide.classList.contains('dark')) {
-                console.log('this slide is dark');
-                myswiper.setAttribute('data-slidecolor', 'dark');
-                myheader.setAttribute('data-slidecolor', 'dark');
-            } else {
-                console.log('this slide is light');
-                myswiper.setAttribute('data-slidecolor', 'light');
-                myheader.setAttribute('data-slidecolor', 'light');
-            }
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
         });
 
     </script>
@@ -279,7 +277,7 @@
     <script>
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         let options = {
-            rootMargin: "-100px 0px -100px 0px"
+            rootMargin: "0px 0px -100px 0px"
         };
         // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
         const myobserver = new IntersectionObserver(entries => {
